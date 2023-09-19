@@ -20,18 +20,19 @@ First, you need to keep in mind that this is an ongoing project. Right now, you 
 
 ### Run the frontend:
 
-Browse the frontend folder
-
-```
-cd sourcesift
-```
-
 Clone the project:
 
 ```
 git clone git@github.com:xe-nvdk/sourcesift.git
 ```
-Now, go to the folder `sourcesift` and do the following:
+
+Browse the frontend folder
+
+```
+cd frontend
+```
+
+Run...
 
 ```
 npm install
