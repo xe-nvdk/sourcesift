@@ -1,0 +1,181 @@
+/* NewsFeed.css */
+
+.flex {
+    display: flex;
+}
+
+.w-1/4 {
+    width: 25%;
+}
+
+.w-3/4 {
+    width: 75%;
+}
+
+.bg-gray-200 {
+    background-color: #edf2f7;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.p-4 {
+    padding: 16px;
+}
+
+.border-r {
+    border-right: 1px solid;
+}
+
+.border-gray-300 {
+    border-color: #e2e8f0;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.text-blue-500 {
+    color: #4299e1;
+}
+
+.hover\:text-blue-700:hover {
+    color: #2c5282;
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.block {
+    display: block;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.transition-transform {
+    transition: transform 150ms;
+}
+
+.transform {
+    transform: scale(1);
+}
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-gray-600 {
+    color: #718096;
+}
+
+.podcast-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if they run out of space */
+    justify-content: space-between;
+}
+
+.episode-card {
+    width: calc(25% - 10px); /* Cards take up 25% of the parent width, minus a small margin for spacing */
+    margin-right: 10px; /* Adds a small space between cards */
+}
+
+.episode-image {
+    object-fit: cover; /* Makes sure images cover the designated space without distorting */
+}
+
+.card {
+    width: calc(50% - 16px);
+    padding: 10px;
+    margin: 8px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* white background for cards */
+    border: 1px solid #e2e8f0; /* light gray border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* shadow for an elevated look */
+    transition: all 0.2s ease-in-out; /* smooth transition for hover effects */
+    border-radius: 0.25rem; /* rounded edges for cards */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* deeper shadow on hover for "lifted" effect */
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;  /* Adjust this for desired image height */
+    object-fit: cover;
+    border-radius: 0.25rem 0.25rem 0 0;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.card-description {
+    color: #718096;
+    font-size: 0.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;  /* Limit the description to 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* card takes up the full width on smaller screens */
+    }
+}
+
+/* Card Styles for medium screens */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: calc(50% - 1rem);
+    }
+}
+
+/* For larger desktop screens */
+@media (min-width: 1025px) {
+    .card {
+        width: calc(25% - 16px); /* on larger screens, you might want more cards in a row, adjust as needed */
+    }
+}
