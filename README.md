@@ -6,6 +6,7 @@ Sourcesift is a web-based application designed to streamline and centralize the 
 
 ## Key Features:
 
+* No tracking: This App and eventually the hosted one is not going to contain anything to track users, preferences, etc. As a "Developer," I don't care about what you read using SourceSift. 
 * Dynamic Content Aggregation: Seamlessly fetches and aggregates content from multiple RSS sources, ensuring users always have fresh content to consume.
 * Responsive Layout: Designed to work beautifully across a range of devices, from desktop to mobile.
 * Podcast Integration: Not just for written content, NewsFeed also caters to audio enthusiasts by embedding playable podcast episodes directly within the interface.
@@ -17,4 +18,55 @@ Sourcesift is a web-based application designed to streamline and centralize the 
 
 First, you need to keep in mind that this is an ongoing project. Right now, you can find two/three parts. The frontend is written in React, the Backend in Python using FastAPI, and a Postgresql database that right now is not in use.
 
-### Run the frontend
+### Run the frontend:
+
+First, clone the project:
+
+```
+git clone git@github.com:xe-nvdk/sourcesift.git
+```
+Now, go to the folder `sourcesift` and do the following:
+
+```
+npm install
+```
+
+Then...
+
+```
+npm start
+```
+
+### Run the backend
+
+Browse the backend folder. 
+
+```
+cd backend
+```
+
+The backend is built using Python and FastAPI, you will find the requirements.txt.
+
+```
+pip3 install -r requirements.txt
+```
+
+Connect to the database, right now is not doing against the database but the connection is required, you can run PostgreSQL in a container. 
+
+```bash
+docker run --hostname=sourcesift --env=POSTGRES_USER=sourcesift --env=POSTGRES_PASSWORD=sourcesift --env=POSTGRES_HOST_AUTH_METHOD=trust --env=POSTGRES_DB=sourcesift --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/15/bin --env=GOSU_VERSION=1.14 --env=LANG=en_US.utf8 --env=PG_MAJOR=15 --env=PG_VERSION=15.1-1.pgdg110+1 --env=PGDATA=/var/lib/postgresql/data --volume=/var/lib/postgresql/data -p 5432:5432 --restart=no --runtime=runc -d postgres
+```
+
+Configure the config.ini file, make sure that has the same value that you are setting in the database. 
+
+```
+python3 main.py
+```
+
+## Start to using it
+
+Go to http://localhost:3000 and you will see the app running. 
+
+## Feedback and contributions
+
+You are more than welcome to contribute, fork, do your thing, and create a pull request. If you want to provide feedback or talk about this project, you can reach me here ignacio[at]vandroogenbroeck[dot]net
