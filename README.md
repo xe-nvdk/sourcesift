@@ -1,4 +1,7 @@
 # Sourcesift
+
+![sourcesift](https://github.com/xe-nvdk/sourcesift/assets/64545348/0083cd2e-2cb8-43bf-a93b-2ad7d37aea18)
+
 Sourcesift is a web-based application designed to streamline and centralize the experience of reading news and listening to podcasts. Leveraging the power of RSS, this application fetches and displays content from various sources, organized into a visually appealing and responsive layout.
 
 ## Key Features:
